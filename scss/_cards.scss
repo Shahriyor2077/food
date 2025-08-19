@@ -1,0 +1,113 @@
+.cards {
+  margin-bottom: 120px;
+}
+h5 {
+  text-align: center;
+  min-width: 55px;
+  max-height: 24px;
+  color: #dc780b;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 9px;
+  line-height: 24px;
+  letter-spacing: 20%;
+}
+
+h3 {
+  font-size: 31.25px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #150c01;
+  text-align: center;
+}
+
+p {
+  max-width: 748px;
+  max-height: 64px;
+  font-weight: 400;
+  size: 16px;
+  line-height: 24px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #150c01;
+  text-align: center;
+}
+.cards_wrapp {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  .cards_box {
+    color: #0000001a;
+    transition: all 0.3s ease;
+    border: 1px solid #0000001a;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &_img {
+      object-fit: cover;
+      border-radius: 50px 5px;
+      margin-bottom: 15px;
+    }
+
+    &_titles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .cards_boxs_subtitle {
+        font-size: 25px;
+        font-weight: 600;
+        color: #333;
+        margin: 10px 25px 20px 25px;
+      }
+    }
+
+    .cards_titles_text {
+      max-width: 310px;
+      max-height: 28px;
+      opacity: 70%;
+      font-weight: 400;
+      size: 16px;
+      line-height: 24px;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .cards_titles_icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 25px;
+
+      .titles_box_icon {
+        width: 34px;
+        height: 36px;
+        border-radius: 20%;
+        background: #ff6600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #e6894f;
+        }
+      }
+
+      &_img {
+        height: 20px;
+      }
+    }
+  }  
+}

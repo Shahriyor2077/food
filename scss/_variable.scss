@@ -1,0 +1,59 @@
+// Primary Colors
+$primary-orange: #DC780B;
+$primary-orange-light: #FF8C42;
+$primary-orange-dark: #B85C00;
+$primary-gold: #FFD700;
+$primary-coral: #FF6B6B;
+
+// Secondary Colors
+$secondary-cream: #FBF1E7;
+$secondary-beige: #FFF8F0;
+$secondary-mint: #4ECDC4;
+$secondary-lavender: #A8E6CF;
+
+// Neutral Colors
+$text-dark: #150C01;
+$text-medium: #333333;
+$text-light: #666666;
+$text-muted: #999999;
+
+// Background Colors
+$bg-white: #FFFFFF;
+$bg-light: #FAFAFA;
+$bg-gradient: linear-gradient(135deg, #FF8C42 0%, #DC780B 100%);
+$bg-gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+$bg-gradient-coral: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+$bg-gradient-mint: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+$bg-gradient-sunset: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 50%, #4ECDC4 100%);
+
+// Shadow Colors
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-medium: rgba(0, 0, 0, 0.15);
+$shadow-dark: rgba(0, 0, 0, 0.2);
+
+// Border Colors
+$border-light: rgba(0, 0, 0, 0.1);
+$border-medium: rgba(0, 0, 0, 0.2);
+
+// Typography
+$font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-secondary: 'Playfair Display', Georgia, serif;
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+
+// Border Radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;

@@ -1,0 +1,118 @@
+
+@use "variable" as *;
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid $border-light;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: $transition-normal;
+    
+    &.scrolled {
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 2px 20px $shadow-light;
+    }
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-lg;
+    
+    &__logo {
+        img {
+            height: 40px;
+            width: auto;
+            transition: $transition-normal;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    
+    &__lists {
+        display: flex;
+        gap: $spacing-xl;
+        font-weight: 500;
+        flex: 1;
+        justify-content: center;
+        
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    
+    &__link {
+        position: relative;
+        padding: $spacing-sm $spacing-md;
+        border-radius: $radius-sm;
+        transition: $transition-normal;
+        font-weight: 500;
+        
+        span {
+            position: relative;
+            z-index: 2;
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $bg-gradient;
+            border-radius: $radius-sm;
+            opacity: 0;
+            transition: $transition-normal;
+            z-index: 1;
+        }
+        
+        &:hover {
+            color: $bg-white;
+            transform: translateY(-2px);
+            
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__btn {
+        font-size: 14px;
+        padding: $spacing-sm $spacing-lg;
+        
+        @media (max-width: 768px) {
+            padding: $spacing-xs $spacing-md;
+            font-size: 12px;
+        }
+    }
+    
+    // Mobile menu toggle (hidden by default, can be added later)
+    &__toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: $spacing-xs;
+        
+        @media (max-width: 768px) {
+            display: flex;
+        }
+        
+        span {
+            width: 25px;
+            height: 3px;
+            background: $text-dark;
+            margin: 3px 0;
+            transition: $transition-normal;
+            border-radius: 2px;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@use "variable" as *;
+
+.features {
+    padding: $spacing-xxl 0;
+    background: $bg-white;
+    position: relative;
+    
+    h5 {
+        text-align: center;
+        margin-bottom: $spacing-sm;
+        animation: fadeInUp 0.8s ease-out;
+    }
+    
+    h3 {
+        text-align: center;
+        margin-bottom: $spacing-xl;
+        color: $text-dark;
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $spacing-xl;
+        margin-top: $spacing-xxl;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: $spacing-lg;
+        }
+    }
+
+    &__card {
+        background: $bg-white;
+        padding: $spacing-xl;
+        border-radius: $radius-lg;
+        text-align: center;
+        transition: $transition-normal;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid $border-light;
+        animation: fadeInUp 0.8s ease-out both;
+        
+        &:nth-child(1) { 
+            animation-delay: 0.1s;
+            &::before { background: $bg-gradient; }
+            &:hover { border-color: $primary-orange; }
+        }
+        &:nth-child(2) { 
+            animation-delay: 0.2s;
+            &::before { background: $bg-gradient-mint; }
+            &:hover { border-color: $secondary-mint; }
+        }
+        &:nth-child(3) { 
+            animation-delay: 0.3s;
+            &::before { background: $bg-gradient-coral; }
+            &:hover { border-color: $primary-coral; }
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: $bg-gradient;
+            transform: scaleX(0);
+            transition: $transition-normal;
+        }
+        
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: $primary-orange;
+            
+            &::before {
+                transform: scaleX(1);
+            }
+            
+            .features__image img {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+    }
+
+    &__image {
+        margin-bottom: $spacing-lg;
+        position: relative;
+        
+        img {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto $spacing-md;
+            transition: $transition-normal;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: $text-dark;
+            margin-bottom: $spacing-md;
+            font-family: $font-secondary;
+        }
+        
+        p {
+            color: $text-light;
+            line-height: 1.6;
+            font-size: 16px;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// Animation keyframes (reusing from hero)
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
